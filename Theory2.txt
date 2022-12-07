@@ -1,0 +1,59 @@
+// ข้อที่ 2 
+console.log('---------- ข้อที่ 2 ----------');
+const fn2 = x => x
+console.log(fn2('hello world'));
+
+// ข้อที่3
+console.log('---------- ข้อที่ 3 ----------');
+function dosomething(x) {
+    x[1] = 5
+}
+
+const arr = [1,2,3]
+dosomething(arr)
+console.log(arr);
+
+// ข้อที่4 - 5
+console.log('---------- ข้อที่ 4 - 5 ----------');
+const obj = {
+    x: 5,
+    y: 2,
+    xy() {
+        return this.x * this.y;
+    }
+}
+console.log(obj.xy())
+console.log(Object.keys(obj))
+
+// ข้อที่7
+console.log('---------- ข้อที่ 7 ----------');
+class Circle {
+    constructor(radius) {
+        this.radius = radius
+    }
+}
+const obj1 =new Circle(2.5)
+const obj2 = Object.create(obj1)
+console.log(obj2.radius);
+
+// ข้อที่8
+console.log('---------- ข้อที่ 8 ----------');
+const obj3 = {x: 'M', y: 35}
+const obj4 = {y: 'XL', z: 28}
+const obj5 = {...obj3, ...obj4}
+console.log(obj5);
+
+// ข้อที่9
+console.log('---------- ข้อที่ 9 ----------');
+const [a,b,c] = [3,6,9]
+console.log(a);
+console.log(b);
+console.log(c);
+
+// ข้อที่10
+console.log('---------- ข้อที่ 10 ----------');
+const { no, auther } = { id: 124, auther: 'Suda Deejai'}
+console.log(no);
+console.log(auther);
+
+console.log(typeof(dosomething));
